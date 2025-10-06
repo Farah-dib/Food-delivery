@@ -1,0 +1,131 @@
+/* 🌟 Base Styles (Desktop) */
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 130px;
+}
+
+.explore-menu h1 {
+    color: #262626;
+    font-weight: 600;
+    font-size: 2.3vw;
+}
+
+.explore-menu-text {
+    max-width: 60%;
+    color: #000;
+    font-size: 1vw;
+    line-height: 1.6;
+}
+
+.explore-menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin: 20px 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.explore-menu-list::-webkit-scrollbar {
+    display: none;
+}
+
+.explore-menu-list-item img {
+    width: 7.5vw;
+    min-width: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s ease;
+}
+
+.explore-menu-list-item img:hover {
+    transform: scale(1.05);
+}
+
+.explore-menu-list-item p {
+    margin-top: 10px;
+    color: #747474;
+    font-size: max(1.4vw, 16px);
+}
+
+.explore-menu-list-item .active {
+    border: 4px solid tomato;
+    padding: 2px;
+}
+
+.explore-menu hr {
+    margin: 10px 0;
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+/* 💻 Tablet Screens (≤ 1050px) */
+@media (max-width: 1050px) {
+    .explore-menu {
+        margin: 0 60px;
+    }
+
+    .explore-menu h1 {
+        font-size: 3vw;
+    }
+
+    .explore-menu-text {
+        max-width: 80%;
+        font-size: 1.2vw;
+    }
+
+    .explore-menu-list {
+        gap: 20px;
+    }
+
+    .explore-menu-list-item img {
+        width: 10vw;
+    }
+
+    .explore-menu-list-item p {
+        font-size: max(1.6vw, 14px);
+    }
+}
+
+/* 📱 Mobile Screens (≤ 750px) */
+@media (max-width: 750px) {
+    .explore-menu {
+        margin: 0 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .explore-menu h1 {
+        font-size: 22px;
+    }
+
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .explore-menu-list {
+        gap: 15px;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+    }
+
+    .explore-menu-list-item img {
+        width: 60px;
+        min-width: 60px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: 13px;
+    }
+
+    .explore-menu hr {
+        margin: 15px 0;
+    }
+}

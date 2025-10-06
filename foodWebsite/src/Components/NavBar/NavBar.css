@@ -1,0 +1,198 @@
+/* 🌟 Base Navbar (Desktop View) */
+.navBar {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 130px;
+}
+
+.navBar .logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navBarMenu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+.navBar li {
+    cursor: pointer;
+}
+
+.navBar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+.navBar button {
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 10px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+
+}
+
+.navBar button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar-search-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 50%;
+    top: -6px;
+    right: -6px;
+}
+
+
+/* 💻 Tablet Screens (≤ 1050px) */
+@media (max-width: 1050px) {
+    .navBar {
+        margin: 0 60px;
+    }
+
+    .navBarMenu {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .navbar-right {
+        gap: 25px;
+    }
+
+    .navBar button {
+        padding: 8px 25px;
+        font-size: 15px;
+    }
+}
+
+/* 📱 Mobile Screens (≤ 750px) */
+@media (max-width: 750px) {
+    .navBar {
+        margin: 0 20px;
+        position: relative;
+    }
+
+    /* Hide normal menu & button */
+    .navBarMenu,
+    .navbar-right button {
+        display: none;
+    }
+
+    /* Hamburger icon */
+    .menu-icon {
+        display: block;
+        width: 28px;
+        height: 22px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .menu-icon span {
+        background-color: #49557e;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        border-radius: 3px;
+        left: 0;
+        transition: 0.3s;
+    }
+
+    .menu-icon span:nth-child(1) {
+        top: 0;
+    }
+
+    .menu-icon span:nth-child(2) {
+        top: 9px;
+    }
+
+    .menu-icon span:nth-child(3) {
+        bottom: 0;
+    }
+
+    /* When active (clicked) */
+    .menu-icon.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .menu-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    /* Mobile menu (hidden by default) */
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        text-align: center;
+        gap: 15px;
+        font-size: 18px;
+        color: #49557e;
+        transition: max-height 0.3s ease;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .mobile-menu.active {
+        max-height: 300px;
+    }
+
+    .mobile-menu li {
+        cursor: pointer;
+        padding: 10px 0;
+    }
+
+    .mobile-menu li:hover {
+        color: tomato;
+    }
+}

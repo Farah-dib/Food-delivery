@@ -1,0 +1,75 @@
+/* ===== Base Styles (Already Yours) ===== */
+.food-display {
+    margin-top: 30px;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+
+.food-display h2 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    row-gap: 50px;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+/* For large tablets and small laptops */
+@media (max-width: 1024px) {
+    .food-display {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .food-display h2 {
+        font-size: max(2.5vw, 22px);
+    }
+
+    .food-display-list {
+        gap: 25px;
+        row-gap: 40px;
+    }
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+    .food-display {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .food-display h2 {
+        font-size: max(3vw, 20px);
+    }
+
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+        row-gap: 35px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .food-display {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .food-display h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .food-display-list {
+        grid-template-columns: 1fr;
+        /* Single column layout */
+        gap: 15px;
+        row-gap: 25px;
+    }
+}
